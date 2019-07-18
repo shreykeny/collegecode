@@ -2,26 +2,26 @@
 #include<math.h>
 #include<conio.h>
 #include<stdlib.h>
-
+#include<conio.h>
 
 
 /* Numerical Method - Sem 3 - Bisection Method */ 
 
-int n,i; 
 
-int pres () {
-
-float x = 3.141593; 
-float y; 
+float pres (float o) {
+printf("%f", o);
+float mu; 
 char str[100];
-sprintf(str, "%.4f", x) ; 
-sscanf(str, "%f" ,&y); 
- printf("%f", y);
+sprintf(str, "%.4f", o) ; 
+sscanf(str, "%f" ,&mu); 
+printf("%f", mu); 
+
 }
 
 
-float main() {
 
+
+float main() {
 	float f1 = 0; // f(x1)
 	float f2 = 0; // f(x2)
 	float f0 = 0; //f(x3)
@@ -30,7 +30,7 @@ float main() {
 	float x0 = 0;
 	float save = -0.000002;
 	int i, j ; 
-
+	
 	printf("\nit no.\t");
 	printf("x1\t");
 	printf("x2\t");
@@ -45,7 +45,7 @@ float main() {
 
 			if ((f1 > 0 && f2 < 0) || (f1 < 0 && f2 > 0)) {
 
-				x1 = precision( ((float)i), 4) ;
+				x1 =  pres((float)i)  ;
 				x2 = (float)i + 1;
 			
 				break;
@@ -60,18 +60,18 @@ float main() {
 			printf("\n"); 
 		printf("%d\t", j + 1);
 		printf("%f\t", x1);
-		printf("%.3f\t", x2);
+		printf("%.4f\t", x2);
 		float x0 = ((x1 + x2) / 2);
 		f1 = x1*x1 - 4 * (x1)-10;
 		f2 = (x1 + 1)*(x1 + 1) - 4 * (x1 + 1) - 10;
 		
 		
 
-		printf("%.3f\t\t", x0);
-		printf("%.3f\t", f1);
-		printf("%.3f\t", f2);
+		printf("%.4f\t\t", x0);
+		printf("%.4f\t", f1);
+		printf("%.4f\t", f2);
 		f0 = x0*x0 - 4 * x0 - 10;
-		printf("%.3f\t", f0);
+		printf("%.4f\t", f0);
 		if (save == x0) {
 
 			break;
