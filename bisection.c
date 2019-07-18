@@ -1,10 +1,18 @@
 #include<stdio.h>
 #include<math.h>
 #include<conio.h>
-#include<ctype.h>
-#include<string.h>
+#include<stdlib.h>
 
 
+
+/* Numerical Method - Sem 3 - Bisection Method */ 
+
+int n,i; 
+
+float precision( o, p) 
+{ 
+    return floor(pow(10,p)*o)/pow(10,p); 
+}
 
 float main() {
 
@@ -15,6 +23,7 @@ float main() {
 	float x2 = 0;
 	float x0 = 0;
 	float save = -0.000002;
+	int i, j ; 
 
 	printf("\nit no.\t");
 	printf("x1\t");
@@ -24,24 +33,16 @@ float main() {
 	printf("f(x2)\t");
 	printf("f(x0)\t\n");
 
-
-
-
-
-
-		for (int i = -15; i <= 15; i++) {
+		for (i = -15; i <= 15; i++) {
 			f1 = i*i - 4 * (i)-10;
 			f2 = (i + 1)*(i + 1) - 4 * (i + 1) - 10;
 
 			if ((f1 > 0 && f2 < 0) || (f1 < 0 && f2 > 0)) {
 
-				x1 = floor(((float)i)*1000)/1000;
+				x1 = precision( ((float)i), 4) ;
 				x2 = (float)i + 1;
 			
-
 				break;
-
-
 
 			}
 
@@ -49,7 +50,7 @@ float main() {
 		}
 
 
-		for (int j = 0; j < 100; j++) {
+		for ( j = 0; j < 100; j++) {
 			printf("\n"); 
 		printf("%d\t", j + 1);
 		printf("%f\t", x1);
