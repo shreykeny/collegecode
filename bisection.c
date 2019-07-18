@@ -9,10 +9,16 @@
 
 int n,i; 
 
-float precision( o, p)  // function to set precision od demical numbers
-{ 
-    return floor(pow(10,p)*o)/pow(10,p); 
+int pres () {
+
+float x = 3.141593; 
+float y; 
+char str[100];
+sprintf(str, "%.4f", x) ; 
+sscanf(str, "%f" ,&y); 
+ printf("%f", y);
 }
+
 
 float main() {
 
