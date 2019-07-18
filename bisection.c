@@ -9,16 +9,16 @@
 
 int n,i; 
 
-float precision( o, p) 
+float precision( o, p)  // function to set precision od demical numbers
 { 
     return floor(pow(10,p)*o)/pow(10,p); 
 }
 
 float main() {
 
-	float f1 = 0;
-	float f2 = 0;
-	float f0 = 0;
+	float f1 = 0; // f(x1)
+	float f2 = 0; // f(x2)
+	float f0 = 0; //f(x3)
 	float x1 = 0;
 	float x2 = 0;
 	float x0 = 0;
