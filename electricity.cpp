@@ -1,27 +1,26 @@
 #include<iostream>
 #include<conio.h>
-using namespace std; 
+using namespace std;
 
 class user {
 	char ch[100];
-	int units; 
-	float phase1, phase2, cost1, cost2, cost3, amount;
+	int units;
+	float phase1=0, phase2=0, cost1=0, cost2=0, cost3=0, amount=0;
+
 
 public: void myData() {
 
-	cout << "Enter your name" << endl; 
-	cin >> ch; 
+	cout << "Enter your name" << endl;
+	cin >> ch;
 	cout << "Enter number of units consumed";
-	cin >> units; 
+	cin >> units;
 }
 
 		void logic() {
 
-			phase1 = units-100;
-			if (phase1 > 0 ) {
+			phase1 = units - 100;
+			if (phase1 >= 0) {
 				cost1 = 100 * (0.5);
-				
-
 			}
 
 			else {
@@ -29,27 +28,28 @@ public: void myData() {
 			}
 
 			phase2 = phase1 - 250;
-			if (phase2 > 0 ) {
+			if (phase2 >= 0) {
 				cost2 = 250 * (0.7);
-				
-		
+
+
 			}
 
 			else {
 				cost2 = phase1 * 0.7;
-			
+
 			}
 
 
-			if (phase2 >= 350) {
+			if (phase2 >= 0) {
 				cost3 = phase2 * (0.9);
+
 
 			}
 
 			amount = 100 + cost1 + cost2 + cost3;
-			
 
-			
+
+
 
 			if (amount > 350) {
 
@@ -58,34 +58,34 @@ public: void myData() {
 			}
 		}
 
-			void printName() {
-				cout <<endl << "Name:" << ch;
-				cout <<endl << "Amount" << amount;
-			}
+		void printName() {
+			cout << endl << "Name:" << ch;
+			cout << endl << "Amount" << amount;
+		}
 
 
-		
+
 };
 
 int main() {
-	int n; 
+	int n;
 
 	cout << "How many users do you wish to register";
-	cin >> n; 
+	cin >> n;
 
 	user users[100];
 
 	for (int i = 0; i < n; i++) {
-		users[i].myData(); 
+		users[i].myData();
 		users[i].logic();
 
 	}
 
 	for (int i = 0; i < n; i++) {
-		users[i].printName(); 
+		users[i].printName();
 
 	}
 
-	_getch(); 
+	_getch();
 
 }
