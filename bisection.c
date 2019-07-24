@@ -38,12 +38,12 @@ int main() {
 			x1 = (float)i;
 			float mu;
 			char str[100];
-			sprintf(str, "%.4f", x1);
+			sprintf(str, "%.3f", x1);
 			sscanf(str, "%f", &mu);
 			x1 = mu;
 
 			x2 = (float)i + 1;
-			sprintf(str, "%.4f", x2);
+			sprintf(str, "%.3f", x2);
 			sscanf(str, "%f", &mu);
 			x0 = mu;
 			break;
@@ -61,7 +61,7 @@ int main() {
 
 		float mu;
 		char str[100];
-		sprintf(str, "%.3f", x0);
+		sprintf(str, "%.2f", x0);
 		sscanf(str, "%f", &mu);
 		x0 = mu;
 
@@ -70,7 +70,7 @@ int main() {
 
 
 
-		printf("%.4f\t\t", x0);
+		printf("%.3f\t\t", x0);
 		printf("%.4f\t", f1);
 		printf("%.4f\t", f2);
 		f0 = x0*x0 - 4 * x0 - 10;
