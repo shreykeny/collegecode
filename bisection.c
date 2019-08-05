@@ -10,7 +10,6 @@
 
 
 
-
 int main() {
 	float f1 = 0; // f(x1)
 	float f2 = 0; // f(x2)
