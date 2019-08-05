@@ -31,7 +31,6 @@ int main() {
 			break;
 		}
 
-
 	}
 
 	cout << "It no" << "\t";
