@@ -1,0 +1,99 @@
+html {
+    background: white; 
+
+    text-decoration: wavy;
+
+}
+
+.icon {
+    width : 30px;
+    height: 30px;
+    padding-right: 25px;
+
+}
+
+h1 {
+    font-family: monospace;
+    font-size: 4em;
+    transition: width 2s;
+    margin: 5px;
+
+}
+
+#gal {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.palm {
+    display: flex; 
+    justify-content: flex-start;
+    width: 50px;
+    height: 50px;
+
+}
+#girl {
+
+    width: 700px;
+    height : 420px;
+}
+
+#para {
+display: flex;
+    align-items: center;
+    font-size: 30px; 
+    font-family: 'Roboto', sans-serif;
+    background: #DAEFE0 ;
+}
+
+#cost {
+    font-size: 20px; 
+    font-family: Arial; 
+}
+
+#para1 {
+    display: flex;
+        align-items: center;
+        font-size: 25px; 
+        font-family: 'Roboto', sans-serif;
+        background: #DAEFE0 ;
+    }
+
+
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px black solid;
+
+    margin-bottom: 10px; 
+    font-family: Arial, Helvetica, sans-serif;
+    background : #EFDADA ;
+
+
+}
+
+.navbar a {
+    color: black;
+    text-decoration: none;
+    font-size: 30px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+
+.logo {
+    width: 100px;
+    height: 100px;
+}
+
+.foot {
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
+    background: 
+
+
+
+}
